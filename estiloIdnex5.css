@@ -16,23 +16,45 @@ body {
     background-position: center;
 
 }
+.boton{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 0.9em;
+    padding-left: 0.9em;
+    
+}
 
+.btn-flecha {
+  background: #6e340b;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+h1 {
+    position: fixed;
+    margin-top: 0.8em;
+}
 
 .mover-desde-abajo {
     position: relative;
-    /* opcional, ya no es necesario */
     transform: translateY(50px);
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
 }
 
-.mostrar {
+.mostrar {    
     transform: translateY(0);
     opacity: 1;
-}
-
-h1 {
-    margin-top: 2em;
 }
 
 
