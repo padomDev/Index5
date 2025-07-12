@@ -16,9 +16,20 @@ body{
 }
 
 
-h1{
-    margin-top: 2em;
+.mover-desde-abajo {
+  position: relative; /* para que funcione 'top' */
+  top: 50px;           /* inicia más abajo */
+  opacity: 0;          /* inicia invisible */
+  transition: top 1s ease, opacity 1s ease; /* transición suave */
 }
+
+.mostrar {
+  top: 0;      /* posición final */
+  opacity: 1;  /* visible */
+}
+
+
+
 
 .section{
     display: flex;
