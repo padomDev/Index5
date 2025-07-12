@@ -1,16 +1,27 @@
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
+  // H1
+  const nuevoH1 = document.createElement('h1');
+  nuevoH1.textContent = 'FIN DEL JUEGO';
+  nuevoH1.classList.add('mover-desde-abajo');
+  document.getElementById('titulo').appendChild(nuevoH1);
 
-    let  nuevoH1 = document.createElement('h1');
-    nuevoH1.textContent = 'FIN DEL JUEGO';
-    nuevoH1.classList.add('mover-desde-abajo');
+  // Forzar reflow del H1
+  void nuevoH1.offsetWidth;
 
-    let titulo = document.getElementById("titulo");
-    titulo.appendChild(nuevoH1);
+  // Activar transición del H1
+  nuevoH1.classList.add('mostrar');
 
-    requestAnimationFrame(() =>{
-        nuevoH1.classList.add('mostrar');
-    });
+  // Sección
+  const section = document.querySelector('.section');
+  section.classList.add('aparece-desde-abajo');
+
+  // Forzar reflow de la sección
+  void section.offsetWidth;
+
+  setTimeout(()=>{
+      // Activar transición de la sección
+  section.classList.add('mostrar-resultado');
+  }, 1000);
+
 });
-
-
 
