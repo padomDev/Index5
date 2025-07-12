@@ -220,11 +220,11 @@ li {
 
 @media(min-width: 1024px) {
     .barra.primero {
-        height: calc(100vh - 38.8em - 1em);
+        height: calc(100vh - 38.4em - 1em);
     }
 
     .barra.segundo {
-        height: calc(100vh - 41.2em - 1em);
+        height: calc(100vh - 40.9em - 1em);
     }
 
     .puesto-2 {
