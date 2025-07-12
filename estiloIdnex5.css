@@ -173,16 +173,16 @@ li {
     justify-content: center;
     gap: 2em;
     /* NO uses position absolute ni bottom aquí */
-      opacity: 0;
-  transform: translateY(50px);
-  transition: transform 0.8s ease, opacity 0.8s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
 
 
 }
 
 .mostrar-ranking {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .puesto-2 {
@@ -218,6 +218,37 @@ li {
     background: sienna;
 }
 
+@media(min-width: 1024px) {
+    .barra.primero {
+        height: calc(100vh - 38.8em - 1em);
+    }
+
+    .barra.segundo {
+        height: calc(100vh - 41.2em - 1em);
+    }
+
+    .puesto-2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 15em;
+    }
+
+    .puesto {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 12.5em;
+    }
+
+
+    .barra {
+        position: relative;
+        width: 5em;
+    }
+}
 
 .perfil {
     position: absolute;
