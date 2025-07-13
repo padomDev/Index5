@@ -1,17 +1,8 @@
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Ubuntu', sans-serif;
-    background: #000;
-    color: #fff;
-    overflow-x: hidden;
-    height: 100vh;
-    /* Asegura que ocupe toda la altura */
+.body {
     align-items: center;
     background:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        /* Capa negra semitransparente */
-        url('img/Imagenes web draftosaurus/fondo-base.jpg');
+        url('img/fondo-base.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -25,6 +16,7 @@ body {
     width: 100%;
     padding-top: 0.9em;
     padding-left: 0.9em;
+
 
 }
 
@@ -52,6 +44,7 @@ h1 {
     position: relative;
     transform: translateY(50px);
     opacity: 0;
+    font-family: 'Oswald', sans-serif;
     transition: transform 1s ease, opacity 1s ease;
 }
 
@@ -68,8 +61,8 @@ h1 {
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     padding: 0.3em;
-    width: 20em;
-    height: 18em;
+    max-width: 600px;
+    width: 100%;
     bottom: 0;
     position: fixed;
     transform: translate(0%, 100%);
@@ -123,7 +116,7 @@ li {
 
 .marron {
     color: #6e340b;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .img {
@@ -153,8 +146,13 @@ li {
     padding: 1em;
     margin: 1em 0.3em 0.3em 0.3em;
     background: linear-gradient(135deg, #628107, #94cc04);
+    box-shadow: 0 7px 0 #628107;
     color: white;
     border: none;
+}
+
+.card-3:hover {
+    background-image: linear-gradient(to right, #3A4D03, #5A7B05);
 }
 
 .card-4 {
@@ -162,17 +160,21 @@ li {
     flex-direction: column;
     border-radius: 1em;
     padding: 1em;
-    margin: 0.3em;
+    margin: 1em 0.3em;
     background: linear-gradient(135deg, #ed7b00, #ffbb03);
+    box-shadow: 0 7px 0 #ed7b00;
     color: white;
     border: none;
+}
+
+.card-4:hover {
+    background-image: linear-gradient(to right, #A05605, #9B7202);
 }
 
 .ranking {
     display: flex;
     justify-content: center;
     gap: 2em;
-    /* NO uses position absolute ni bottom aquí */
     opacity: 0;
     transform: translateY(50px);
     transition: transform 0.8s ease, opacity 0.8s ease;
@@ -208,47 +210,15 @@ li {
 }
 
 .barra.primero {
-    height: calc(100vh - 29.9em - 1em);
+    height: 48vh;
     background: orange;
 }
 
 .barra.segundo {
-    height: calc(100vh - 31.4em - 1em);
-    /* 100vh - height de .section - height del perfil */
+    height: 45vh;
     background: sienna;
 }
 
-@media(min-width: 1024px) {
-    .barra.primero {
-        height: calc(100vh - 38.4em - 1em);
-    }
-
-    .barra.segundo {
-        height: calc(100vh - 40.9em - 1em);
-    }
-
-    .puesto-2 {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: 15em;
-    }
-
-    .puesto {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: 12.5em;
-    }
-
-
-    .barra {
-        position: relative;
-        width: 5em;
-    }
-}
 
 .perfil {
     position: absolute;
@@ -268,8 +238,6 @@ li {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    /* 🔑 Clave */
-
 }
 
 .perfil .marco {
@@ -284,21 +252,16 @@ li {
 .corona {
     position: absolute;
     top: -5em;
-    /* sube la corona encima */
     width: 4.3em;
-    /* ajusta tamaño */
     left: 90%;
     transform: translateX(-50%) rotate(30deg);
-    /* Aquí inclinas */
     z-index: 2;
-    /* se asegura que esté arriba del marco */
     transition: none;
 }
 
 .numero {
     position: absolute;
-    bottom: 10px;
-    /* separa del borde inferior de la barra */
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
